@@ -103,7 +103,7 @@ def semester_parse(weekly, t):
 def main():
     file = './courses_2012_spring.csv'
     courses = read_csv(file)
-    t = init_mongo('fc', 'LiveCourses')
+    t = init_mongo('fc', 'livecourse')
     weekly_courses = week_parse(courses)
     weekly_lectures = semester_parse(weekly_courses, t)
     insert_courses(t, weekly_lectures)
